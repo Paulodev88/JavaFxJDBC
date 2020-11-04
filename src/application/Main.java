@@ -17,6 +17,7 @@ public class Main extends Application {
     public synchronized void start(Stage primaryStage) {
 
         try {
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
             ScrollPane scrollPane = loader.load();
 
