@@ -66,7 +66,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 
         Stage parentStage = Utils.currentStage(event);
         Seller obj = new Seller();
-        //createDialogForm(obj, "/gui/SellerForm.fxml", parentStage);
+        createDialogForm(obj, "/gui/SellerForm.fxml", parentStage);
     }
 
     public void setSellerService(SellerServices service){
@@ -106,7 +106,7 @@ public class SellerListController implements Initializable, DataChangeListener {
         initEditButtons();
         initRemoveButtons();
     }
-    /*
+
     private void createDialogForm(Seller obj, String absoluteName,Stage parentStage){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
@@ -133,7 +133,7 @@ public class SellerListController implements Initializable, DataChangeListener {
         catch (IOException e){
             Alerts.showAlert("IO Exception", "Error loadinf view", e.getMessage(), Alert.AlertType.ERROR);
         }
-    }*/
+    }
 
     @Override
     public void onDataChanged() {
@@ -154,9 +154,9 @@ public class SellerListController implements Initializable, DataChangeListener {
                     return;
                 }
                 setGraphic(button);
-                //button.setOnAction(
-                  //      event -> createDialogForm(
-                    //            obj, "/gui/SellerForm.fxml", Utils.currentStage(event)));
+                button.setOnAction(
+                        event -> createDialogForm(
+                                obj, "/gui/SellerForm.fxml", Utils.currentStage(event)));
             }
         });
     }
