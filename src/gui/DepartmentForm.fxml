@@ -11,11 +11,11 @@
 
 <AnchorPane prefHeight="138.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DepartmentFromController">
    <children>
-      <GridPane prefHeight="92.0" prefWidth="467.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="20.0">
+      <GridPane layoutY="10.0" prefHeight="96.0" prefWidth="548.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="10.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="99.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="59.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="257.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="0.0" prefWidth="232.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
