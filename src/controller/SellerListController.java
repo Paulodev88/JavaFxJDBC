@@ -19,6 +19,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.entities.Seller;
+import model.services.DepartmentServices;
 import model.services.SellerServices;
 
 import java.io.IOException;
@@ -115,7 +116,8 @@ public class SellerListController implements Initializable, DataChangeListener {
 
             SellerFromController controller = loader.getController();
             controller.setSeller(obj);
-            controller.setSellerService(new SellerServices());
+            controller.setService(new SellerServices(), new DepartmentServices());
+            controller.loadAssociatedObjects();
             controller.subscribeDataChangeListener(this);
             controller.updateFormDate();
 
@@ -131,6 +133,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 
         }
         catch (IOException e){
+            e.printStackTrace();
             Alerts.showAlert("IO Exception", "Error loadinf view", e.getMessage(), Alert.AlertType.ERROR);
         }
     }
